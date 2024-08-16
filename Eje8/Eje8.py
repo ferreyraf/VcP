@@ -15,8 +15,8 @@ print(sys.argv)
 
 Pts1 = np.float32([[0,0],[0,0],[0,0],[0,0]])
 contador = 0
-"Eventos del mouse"
 
+"Eventos del mouse"
 def draw(event,x,y,flags,param):
     global Pts1,drawing,img2,contador,img
     if event == cv2.EVENT_LBUTTONDOWN :
@@ -49,8 +49,6 @@ img = cv2.imread(filename)
 img2 = img.copy()
 cv2.namedWindow('imagen')
 cv2.setMouseCallback('imagen',draw)
-
-
 
 
 while(1):

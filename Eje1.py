@@ -12,6 +12,7 @@ from random import randint
 
 def adivina(j): 
     pc_num = randint(0, 100)
+
     for i in range(0, j):
         us_num = int(input("Ingrese un número: "))
         if us_num < pc_num:
@@ -22,6 +23,7 @@ def adivina(j):
             print("Adivino el número.!")
             break
         print("Intento número "+str(i+1) + ".")
+
     if i+1 == j:
         print('Se quedo sin intentos.!')
 
@@ -34,5 +36,7 @@ def adivina(j):
             print('Con ' + str(Intentos_1) + ' intento de sobra.!')
 
 print("\t\tAdivinar un número del 0-100")
+
+
 Intentos = int(input("Ingrese un número de intentos:"))
 adivina(Intentos)
