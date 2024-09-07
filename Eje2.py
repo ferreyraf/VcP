@@ -63,3 +63,28 @@ h_R,w_R,axi = Channel_Red.shape
 
 
 cv2.waitKey(0)
+
+
+
+
+
+# """! /usr/bin/env python
+# *- coding: utf-8 -*-
+# """
+
+# import cv2
+# img = cv2.imread('hoja.png',0)
+# cv2.imshow("Imagen en escala de Girses.",img)
+# cv2.waitKey(0)
+# x=len(img)
+
+# for fil in range (0,x):
+#     for col in range (0,x):
+#         if(img[fil,col]>200):
+#             img[fil,col]=255
+#         else:
+#             img[fil,col]=0
+            
+# cv2.imshow("Imagen Segmentada",img)
+# cv2.waitKey(0)
+

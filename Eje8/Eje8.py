@@ -46,6 +46,8 @@ def funcion_Rectificar(img2,Pts1):
 
 
 img = cv2.imread(filename)
+WIDTHER ,HIGTHER, AXI = img.shape
+print(img.shape)
 img2 = img.copy()
 cv2.namedWindow('imagen')
 cv2.setMouseCallback('imagen',draw)
